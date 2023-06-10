@@ -86,14 +86,13 @@ class WallTest {
 
     @Test
     void whenFindBlockByColorIsNotPresentThenThrowNullPointerException() {
-        String color = Color.GREEN.getName();
         //when - then
+        String color = Color.GREEN.getName();
         assertThrows(NullPointerException.class, () -> wall.findBlockByColor(color));
     }
 
     @Test
     void whenFindBlocksByMaterialIsNotEmptyThenReturnListOfResults() {
-        //given
         //when - then
         String expected = "[BaseBlock(color='black',material='basalt'), BaseBlock(color='black',material='basalt')]";
         List<Block> actual = wall.findBlocksByMaterial(Material.BASALT.getName());

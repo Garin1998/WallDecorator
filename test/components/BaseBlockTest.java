@@ -19,6 +19,7 @@ class BaseBlockTest {
 
     @Test
     void whenBlockIsCopiedThenReturnItAsDeepCopy() {
+        //when - then
         Block anotherBlock = block.copy();
         assertEquals(block.getColor(), anotherBlock.getColor());
         assertEquals(block.getMaterial(), anotherBlock.getMaterial());
